@@ -21,7 +21,7 @@ nav ul {
 
 nav li {
     display: inline;
-    margin: 0 1em; 
+    margin: 0 1em;
 }
 
 nav a {
@@ -32,7 +32,7 @@ nav a {
 main {
     padding: 2em;
     max-width: 800px; /* Set a max width for the content */
-    margin: 0 auto;  /* Center the content */
+    margin: 0 auto; /* Center the content */
 }
 
 footer {
@@ -40,8 +40,81 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-    position: fixed; /* Keep footer at bottom */
+    position: relative; /* fixed makes it overlap other elements */
     bottom: 0;
     width: 100%;
+}
 
+
+/* About Me specific styles */
+
+.about-section {
+    padding: 2em;
+}
+
+
+
+.animated-box {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly offset */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+    margin-top: 50px;
+}
+
+.animated-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.animated-image {
+    opacity: 0;
+    transform: scale(0.8); /* Start slightly smaller */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-top: 100px; /* adjust as needed */
+}
+
+.animated-image.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Pipe animation styles */
+
+.pipe-background {
+    position: fixed; /* Stay fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind other content */
+    overflow: hidden; /* Hide overflowing pipe elements */
+    perspective: 100px; /* Create 3D perspective for tilt */
+    pointer-events: none;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0; /* Start at the bottom and animate upwards */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: 50px; /* Adjust width as needed */
+    height: 150px; /* Make pipes taller than viewport */
+    background-color: rgba(0, 0, 255, 0.3); /* Light, semi-transparent blue */
+    filter: blur(5px); /* Add blur effect */
+    animation: pipeAnimation 10s linear infinite; /* Animate! */
+    opacity: 0.8;
+}
+
+@keyframes pipeAnimation {
+    0% {
+        bottom: -150px; /* Start below viewport */
+        transform: translateX(-50%) rotateX(20deg); /* Initial tilt */
+    }
+    100% {
+        bottom: 100%; /* Animate past the top */
+        transform: translateX(-50%) rotateX(-20deg); /* Tilt the other way */
+
+    }
 }
