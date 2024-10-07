@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="pipe-background"></div> <header>
+<div class="pipe-background"></div>
+<header>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -18,13 +19,11 @@
 </header>
 
 <main>
-
   <section class="about-section">
     <h1>About Me</h1>
 
-
     <div class="about-content">
-      <p>Add a lot of content here... LOTS of it, to make the page scrollable. You can copy and paste text multiple times to create filler content. Keep adding more and more until you have enough to scroll. For example, you might talk about your skills, experience, hobbies, or anything else that you think is relevant.</p>
+      <p>Add lots of content here about yourself, enough to make the page scrollable.  Talk about your skills, experience, hobbies, or anything else relevant. The more content the better to demonstrate the scrolling and animations.  You can copy and paste text to create filler content if needed.</p>
 
       <div class="animated-box">
         <h2>Animated Box</h2>
@@ -33,18 +32,32 @@
 
       <div class="animated-image">
         <img src="image.jpg" alt="Animated Image" width="300px">
-        <p>Replace with image url</p>
+        <p>Replace with actual image URL or path.</p>
       </div>
 
-
+      <button onclick="downloadCV()">Download CV</button>
+      <p>Make sure there is a file named 'my_cv.docx' (or whatever you name it) in the same directory as this HTML file.</p>
     </div>
-
   </section>
 </main>
+
 <footer>
   <p>© 2023 My Website</p>
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+  function downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'my_cv.docx'; //  <-- Changed to .docx
+    link.download = 'my_cv.docx'; // <-- Changed to .docx
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
+
 </body>
 </html>
