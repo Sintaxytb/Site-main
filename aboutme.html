@@ -23,9 +23,7 @@
         <h1>About Me</h1>
 
         <div class="about-content">
-            <p>Add lots of content here about yourself, enough to make the page scrollable. Talk about your skills,
-                experience, hobbies, or anything else relevant. The more content the better to demonstrate the scrolling
-                and animations. You can copy and paste text to create filler content if needed.</p>
+            <p>Add lots of content here about yourself, enough to make the page scrollable. Talk about your skills, experience, hobbies, or anything else relevant. The more content, the better, to demonstrate the scrolling and animations. You can copy and paste text to create filler content if needed.</p>
 
             <div class="animated-box">
                 <h2>Animated Box</h2>
@@ -38,8 +36,7 @@
             </div>
 
             <button onclick="downloadCV()">Download CV</button>
-            <p>Make sure there is a file named 'my_cv.docx' (or whatever you name it) in the same directory as this HTML
-                file.</p>
+            <p>Make sure there is a file named 'my_cv.docx' (or whatever you name it) in the same directory as this HTML file.</p>
         </div>
     </section>
 </main>
@@ -49,20 +46,16 @@
 </footer>
 
 <script src="script.js"></script>
-
 <script>
     function downloadCV() {
         const link = document.createElement('a');
-        link.href = 'my_cv.docx'; //  <-- Changed to .docx
-        link.download = 'my_cv.docx'; // <-- Changed to .docx
+        link.href = 'my_cv.docx'; // Replace 'my_cv.docx' with the actual filename of your CV.
+        link.download = 'my_cv.docx'; // This sets the filename users will see when downloading.
         link.style.display = 'none';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     }
 </script>
-
 </body>
 </html>
-
-TODO: Ajouter encadrement + changement bouton quand overlay
