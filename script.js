@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
 
     // Pipe animation
@@ -15,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-
     // animations when scrolling
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const animatedBox = document.querySelector('.animated-box');
         const animatedImage = document.querySelector('.animated-image');
 
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Welcome text animation
     const welcomeText = document.getElementById('welcome-text');
     welcomeText.textContent = "Welcome!";  // Set text content
-
 
 
 });
