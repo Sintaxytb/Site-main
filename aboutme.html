@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="pipe-background"></div>
 <header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
-  <section class="about-section">
-    <h1>About Me</h1>
+    <section class="about-section">
+        <h1>About Me</h1>
 
-    <div class="about-content">
-      <p>Add lots of content here about yourself, enough to make the page scrollable.  Talk about your skills, experience, hobbies, or anything else relevant. The more content the better to demonstrate the scrolling and animations.  You can copy and paste text to create filler content if needed.</p>
+        <div class="about-content">
+            <p>Add lots of content here about yourself, enough to make the page scrollable. Talk about your skills,
+                experience, hobbies, or anything else relevant. The more content the better to demonstrate the scrolling
+                and animations. You can copy and paste text to create filler content if needed.</p>
 
-      <div class="animated-box">
-        <h2>Animated Box</h2>
-        <p>This box will fade in as you scroll.</p>
-      </div>
+            <div class="animated-box">
+                <h2>Animated Box</h2>
+                <p>This box will fade in as you scroll.</p>
+            </div>
 
-      <div class="animated-image">
-        <img src="image.jpg" alt="Animated Image" width="300px">
-        <p>Replace with actual image URL or path.</p>
-      </div>
+            <div class="animated-image">
+                <img src="image.jpg" alt="Animated Image" width="300px">
+                <p>Replace with actual image URL or path.</p>
+            </div>
 
-      <button onclick="downloadCV()">Download CV</button>
-      <p>Make sure there is a file named 'my_cv.docx' (or whatever you name it) in the same directory as this HTML file.</p>
-    </div>
-  </section>
+            <button onclick="downloadCV()">Download CV</button>
+            <p>Make sure there is a file named 'my_cv.docx' (or whatever you name it) in the same directory as this HTML
+                file.</p>
+        </div>
+    </section>
 </main>
 
 <footer>
-  <p>© 2023 My Website</p>
+    <p>© 2023 My Website</p>
 </footer>
 
 <script src="script.js"></script>
 
 <script>
-  function downloadCV() {
-    const link = document.createElement('a');
-    link.href = 'my_cv.docx'; //  <-- Changed to .docx
-    link.download = 'my_cv.docx'; // <-- Changed to .docx
-    link.style.display = 'none';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
+    function downloadCV() {
+        const link = document.createElement('a');
+        link.href = 'my_cv.docx'; //  <-- Changed to .docx
+        link.download = 'my_cv.docx'; // <-- Changed to .docx
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 </script>
 
 </body>
