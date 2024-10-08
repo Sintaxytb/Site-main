@@ -28,10 +28,8 @@ body {
 header {
     background-color: #333; /* Dark gray header */
     color: white;
-    padding: 1em 0;
-    margin-top: 50px;
-
-
+    padding: 1em 0;  /* Original padding */
+    padding-top: 50px; /* Added top padding */
 }
 
 nav ul {
