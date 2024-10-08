@@ -24,36 +24,37 @@
 
         <div class="about-content">
             <p>Add lots of content here about yourself, enough to make the page scrollable. Talk about your skills,
-                experience, hobbies, or anything else relevant. The more content, the better, to demonstrate the
-                scrolling and animations. You can copy and paste text to create filler content if needed.</p>
+                experience, hobbies, or anything else relevant. The more content the better to demonstrate the scrolling
+                and animations. You can copy and paste text to create filler content if needed.</p>
 
             <div class="animated-box">
-                <h2>Test</h2>
-                <p>Lorem ipsum sit amet.</p>
+                <h2>Animated Box</h2>
+                <p>This box will fade in as you scroll.</p>
             </div>
 
             <div class="animated-image">
                 <img src="image.jpg" alt="Animated Image" width="300px">
-                <p>Replace with actual image URL or path.[PLACEHOLDER]</p>
+                <p>Replace with actual image URL or path.</p>
             </div>
 
             <button onclick="downloadCV()">Download CV</button>
             <p>Make sure there is a file named 'my_cv.docx' (or whatever you name it) in the same directory as this HTML
                 file.</p>
+            <button onclick="window.location.href='http://135.125.133.76:3001/status/passwrd'">Server Status</button>
         </div>
     </section>
 </main>
 
 <footer>
-    <p>© 2024 Arthur MASSET</p>
+    <p>© 2023 My Website</p>
 </footer>
 
 <script src="script.js"></script>
 <script>
     function downloadCV() {
         const link = document.createElement('a');
-        link.href = 'my_cv.docx'; // Replace 'my_cv.docx' with the actual filename of your CV.
-        link.download = 'my_cv.docx'; // This sets the filename users will see when downloading.
+        link.href = 'my_cv.docx'; // Replace with actual filename
+        link.download = 'my_cv.docx'; // Replace with desired download filename
         link.style.display = 'none';
         document.body.appendChild(link);
         link.click();
