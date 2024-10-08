@@ -25,9 +25,13 @@ with scroll animations, and a contact page.
 ## Folder Structure
 
 ├── index.html // Homepage
+
 ├── aboutme.html // About Me page
+
 ├── contact.html // Contact page
+
 ├── style.css // Styles for all pages
+
 └── script.js // Script for animations
 
 ## Future Improvements
