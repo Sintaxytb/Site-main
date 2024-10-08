@@ -3,40 +3,37 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure body takes up full viewport height */
+    min-height: 100vh;
 }
 
-
 #bg {
-    position: fixed; /* or absolute */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom right, blue, red, green); /* Gradient background */
-    z-index: -2;           /* Behind the pipes */
-    animation: fadeIn 5s ease; /* Animation name and duration */
+    background: linear-gradient(to bottom right, blue, red, green);
+    z-index: -2;
+    animation: fadeIn 5s ease;
 }
-
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-
 header {
-    background-color: #333; /* Dark gray header */
+    background-color: #333;
     color: white;
-    padding: 1em 0;  /* Original padding */
-    padding-top: 50px; /* Added top padding */
+    padding: 1em 0;
+    margin-bottom: 20px; /* Space between header and main content */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Center the navigation links */
+    text-align: center;
 }
 
 nav li {
@@ -51,44 +48,38 @@ nav a {
 
 main {
     padding: 2em;
-    max-width: 800px; /* Set a max width for the content */
-    margin: 0 auto; /* Center the content */
+    max-width: 800px;
+    margin: 0 auto;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-
-#welcome-text { /* Styles for Welcome text */
+#welcome-text {
     font-size: 2em;
-    text-align: center; /* Center the text */
-    margin-bottom: 20px; /* Add some space below */
-
+    text-align: center;
+    margin-bottom: 20px;
 }
-
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em 0;
-    position: relative; /* fixed makes it overlap other elements */
-
+    position: relative;
     width: 100%;
+    margin-top: 20px; /* Space between main content and footer */
 }
-
-
-
-/* About Me specific styles */
 
 .about-section {
     padding: 2em;
 }
 
-
-
 .animated-box {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Start slightly offset */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
     margin-top: 50px;
 }
 
@@ -97,12 +88,11 @@ footer {
     transform: translateY(0);
 }
 
-
 .animated-image {
     opacity: 0;
-    transform: scale(0.8); /* Start slightly smaller */
+    transform: scale(0.8);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    margin-top: 100px; /* adjust as needed */
+    margin-top: 100px;
 }
 
 .animated-image.show {
@@ -110,43 +100,38 @@ footer {
     transform: scale(1);
 }
 
-
-
-/* Pipe animation styles */
-
 .pipe-background {
-    position: fixed; /* Stay fixed to the viewport */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Behind other content */
-    overflow: hidden; /* Hide overflowing pipe elements */
-    perspective: 100px; /* Create 3D perspective for tilt */
+    z-index: -1;
+    overflow: hidden;
+    perspective: 100px;
     pointer-events: none;
 }
 
 .pipe {
     position: absolute;
-    bottom: 0; /* Start at the bottom and animate upwards */
-    left: 50%; /* Center horizontally */
+    bottom: 0;
+    left: 50%;
     transform: translateX(-50%);
-    width: 50px; /* Adjust width as needed */
-    height: 150px; /* Make pipes taller than viewport */
-    background-color: rgba(0, 0, 255, 0.3); /* Light, semi-transparent blue */
-    filter: blur(5px); /* Add blur effect */
-    animation: pipeAnimation 10s linear infinite; /* Animate! */
+    width: 50px;
+    height: 150px;
+    background-color: rgba(0, 0, 255, 0.3);
+    filter: blur(5px);
+    animation: pipeAnimation 10s linear infinite;
     opacity: 0.8;
 }
 
 @keyframes pipeAnimation {
     0% {
-        bottom: -150px; /* Start below viewport */
-        transform: translateX(-50%) rotateX(20deg); /* Initial tilt */
+        bottom: -150px;
+        transform: translateX(-50%) rotateX(20deg);
     }
     100% {
-        bottom: 100%; /* Animate past the top */
-        transform: translateX(-50%) rotateX(-20deg); /* Tilt the other way */
-
+        bottom: 100%;
+        transform: translateX(-50%) rotateX(-20deg);
     }
 }
