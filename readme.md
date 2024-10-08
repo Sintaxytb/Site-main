@@ -18,7 +18,7 @@ This is a basic, three-page website built with HTML, CSS, and JavaScript. It inc
 
 * **HTML:**  For structuring the content.
 * **CSS:** For styling the website.
-* **JavaScript:** For the scroll animations on the "About Me" page.
+* **JavaScript:** For the scroll animations on all pages.
 
 ## Folder Structure
 
