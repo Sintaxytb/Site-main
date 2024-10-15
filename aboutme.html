@@ -40,13 +40,13 @@
             <button onclick="downloadCV()">Download CV</button>
             <p>Make sure there is a file named 'my_cv.docx' (or whatever you name it) in the same directory as this HTML
                 file.</p>
-            <button onclick="window.location.href='https://status.amasset.xyz/status/general'">Server Status</button>
+            <button onclick="window.location.href='https://status.amasset.xyz/status/general'">Status du serveur</button>
         </div>
     </section>
 </main>
 
 <footer>
-    <p>© 2023 My Website</p>
+    <p>© 2024</p>
 </footer>
 
 <script src="script.js"></script>
@@ -54,7 +54,7 @@
     function downloadCV() {
         const link = document.createElement('a');
         link.href = 'my_cv.docx'; // Replace with actual filename
-        link.download = 'my_cv.docx'; // Replace with desired download filename
+        link.download = 'CV AM 2024'; // Replace with desired download filename
         link.style.display = 'none';
         document.body.appendChild(link);
         link.click();
