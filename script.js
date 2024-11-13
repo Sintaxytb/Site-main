@@ -11,7 +11,7 @@ if (contactForm) {
 
 // Server status button
 document.getElementById('server-status').addEventListener('click', () => {
-    window.location.href = 'status.amasset.xyz/status/general';
+    window.location.href = 'https://status.amasset.xyz/status/general';
 });
 
 // Background animation enhancement
