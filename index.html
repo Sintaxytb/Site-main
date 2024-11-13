@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home - Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="pipe-background"></div>
-<div id="bg"></div>
+<div class="background-animation"></div>
 
-<header id="header">
-    <div class="content">
-        <div class="inner">
-            <h1 id="welcome-text"></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutme.html">About Me</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+<nav>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="page">
+    <div class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm a passionate developer crafting digital experiences</p>
+        <a href="about.html" class="btn">Learn More</a>
     </div>
-</header>
+</div>
 
-<main>
-    <button onclick="window.location.href='https://status.amasset.xyz/status/general'">Status du serveur</button>
-</main>
+<div id="server-status">Server Status</div>
 
-<footer>
-    <p>© 2024</p>
-</footer>
 <script src="script.js"></script>
 </body>
 </html>
