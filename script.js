@@ -62,3 +62,12 @@ function createParticle() {
 
 // Create new particles periodically
 setInterval(createParticle, 200);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const spotlight = document.getElementById('spotlight');
+
+    document.addEventListener('mousemove', function(e) {
+        spotlight.style.left = e.clientX + 'px';
+        spotlight.style.top = e.clientY + 'px';
+    });
+});

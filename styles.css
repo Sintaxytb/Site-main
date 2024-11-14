@@ -229,3 +229,24 @@ nav {
         font-size: 2.5rem;
     }
 }
+#spotlight-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #0f172a; /* slate-900 equivalent */
+    overflow: hidden;
+}
+
+#spotlight {
+    pointer-events: none;
+    position: fixed;
+    width: 384px; /* equivalent to w-96 */
+    height: 384px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 35%,
+            transparent 70%
+    );
+}
