@@ -16,6 +16,9 @@ with scroll animations, and a contact page.
 1. **Clone the repository:** `git clone https://github.com/https://github.com/Sintaxytb/Site-main/`
 2. **Open `index.html`:**  Simply open the `index.html` file in your web browser.
 
+> [!IMPORTANT]  
+> You need a host name for GitHub pages to work !
+
 ## Technologies Used
 
 * **HTML:**  For structuring the content.
