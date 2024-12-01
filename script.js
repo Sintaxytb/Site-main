@@ -3,7 +3,7 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Add your form submission logic here
+        //form submission logic here
         alert('Message sent! (Demo only)');
         e.target.reset();
     });
@@ -14,7 +14,7 @@ document.getElementById('server-status').addEventListener('click', () => {
     window.location.href = 'https://status.amasset.xyz/status/general';
 });
 
-// Background animation enhancement
+// Background animation
 function createParticle() {
     const particle = document.createElement('div');
     particle.style.position = 'fixed';
