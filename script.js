@@ -71,3 +71,27 @@ document.addEventListener('DOMContentLoaded', function() {
         spotlight.style.top = e.clientY + 'px';
     });
 });
+
+// Loading screen handling
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loadingScreen = document.getElementById("loading");
+
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function (event) {
+            if (this.target !== "_blank" && this.href) {
+                event.preventDefault(); // Stop default navigation
+                loadingScreen.style.display = "flex"; // Show loader
+
+                setTimeout(() => {
+                    window.location.href = this.href; // Navigate after delay
+                }, 1000); // Adjust timing if needed
+            }
+        });
+    });
+
+    // Hide loader when the page fully loads
+    window.onload = function () {
+        loadingScreen.style.display = "none";
+    };
+});
